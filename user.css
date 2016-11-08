@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
+}
+h1 {
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    width: 75%;
+}
+
+.navbar {
+    padding:10px;
+    border: black dotted 2px;
+}
+
+#twit-container {
+    padding: 10px;
+    border: 1px #222222 solid;
+}
+
+#twit-button {
+    height: 50%;
+    margin: 0px;
+}
+
+.twit {
+    
+}
