@@ -5,15 +5,11 @@
 }
 h1 {
     text-align: center;
-}
-
-textarea {
-    resize: none;
-    width: 75%;
+    font-family: serif;
 }
 
 .navbar {
-    padding:10px;
+    padding: 10px;
     border: black dotted 2px;
 }
 
@@ -22,11 +18,27 @@ textarea {
     border: 1px #222222 solid;
 }
 
+#twit-box {
+    resize: none;
+    width: 70%;
+    position:relative;
+}
+
 #twit-button {
-    height: 50%;
-    margin: 0px;
+    position: relative;
+}
+
+#twit-button:disabled {
+    background-color: #eeeeee;
+}
+
+#twit-feed {
+    
 }
 
 .twit {
-    
+    background-color: #7ac3d7; 
+    border: #D0D0D0 2px;
+    font-size: 16px;
+    padding: 5px;
 }
