@@ -8,29 +8,17 @@ h1 {
     font-family: serif;
 }
 
-.navbar {
-    padding: 10px;
-    border: black dotted 2px;
-}
-
-#twit-container {
-    padding: 10px;
-    border: 1px #222222 solid;
-}
-
 #twit-box {
     resize: none;
-    width: 70%;
-    position:relative;
-}
-
-#twit-button {
-    position: relative;
 }
 
 #twit-button:disabled {
     background-color: #eeeeee;
 }
+#twit-button:focus {
+    outline: none;
+}
+::-moz-focus-inner {border: 0;}
 
 #twit-feed {
     

@@ -11,17 +11,23 @@
         <link rel="stylesheet" href="./user.css">
         <script>
           window.onload = function() {
-           textarea = document.getElementById('twit-box');
+           textarea = document.getElementById('twit-input');
            button = document.getElementById('twit-button');
 
-         textarea.addEventListener('keyup', function() {
-             if (textarea.value.length === 0 || textarea.value.length > 140) {
-                 button.disabled = true;
-             }
-             else {
-                 button.disabled = false;
-                 }
-         });
+              textarea.paste = textarea.onchange = textarea.onkeyup = function() {
+                  var len = parseInt(this.getAttribute("maxlength"));
+                  if (this.value.length > len) {
+                      this.value = this.value.substr(0, len);
+                      button.disabled = true;
+                      console.log('doo');
+                  }
+                  else {
+                      button.disabled = false;
+              };
+                  };
+
+
+
              };
         </script>
     </head>
@@ -29,16 +35,17 @@
         <h1>Muggle Wumps</h1>
         <div class="container">
             <div class="row">
-                <div class="two columns navbar">
+                <nav class="two columns navbar">
                     <ul>
                         <li>link</li>
                         <li>otherlink</li>
                     </ul>
+                </nav>
+                <div class="eight columns" id="twit-container">
+                    <textarea class="u-full-width" id="twit-input" placeholder="What's on your mind?" maxlength="140"></textarea>
                 </div>
-                <div class="ten columns" id="twit-container">
-                    <textarea id="twit-box" autofocus="true" placeholder="what's on your mind"></textarea>
-                    <button class="button-primary" id="twit-button" type="submit">tweet</button>
-                    <div class="twit">twit twit!</div>
+                <div class ="two columns">
+                    <button class="button-primary" id="twit-button" disabled="true">Send</button>
                 </div>
             </div>
         </div>
