@@ -20,13 +20,19 @@ h1 {
 }
 ::-moz-focus-inner {border: 0;}
 
-#twit-feed {
-    
-}
-
 .twit {
     background-color: #7ac3d7; 
     border: #D0D0D0 2px;
     font-size: 16px;
     padding: 5px;
+}
+
+#twit-container {
+    list-style-type: none;
+}
+
+#twit-container li {
+    border-radius: 30px / 30px;
+    background-color: #b0b0b0;
+    padding: 10px;
 }
